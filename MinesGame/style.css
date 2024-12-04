@@ -19,7 +19,7 @@ main {
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
 }
 .game-container {
@@ -27,7 +27,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #808080, #404040);
     height: 100%;
     width: 100%;
 }
@@ -92,13 +91,12 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #808080, #404040);
-       color: white;
+    color: white;
     font-family: 'Lacquer', sans-serif;
     text-align: center;
     padding: 50% 0;
     height: 100%;
-}
+}   
 
 .panel {
     align-items: center;
