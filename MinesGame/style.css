@@ -1,41 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     height: 100vh;
     margin: 0;
     background: linear-gradient(to bottom, #808080, #404040);
+    font-family: 'Lacquer', sans-serif;
+    color: white;
 }
 
 main {
-    margin-bottom: 50px; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+    width: 100vw;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #808080, #404040);
+    height: 100%;
+    width: 100%;
+}
+.score-container {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+button:hover {
+    background-color: #777;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 100px);
     grid-template-rows: repeat(6, 100px);
+    gap: 5px;
 }
 
 .grid-item {
     border-radius: 15px;
-    margin: 5px;
-    background-image: url('./img/letoltes.jpg'); 
     background-size: cover;
     background-position: center;
-    transition: transform 0.6s, background-image 0.6s; 
+    transition: transform 0.3s, background-image 0.3s;
     cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/letoltes.jpg);
 }
 
-.grid-item.flipped {
-    transform: rotateY(180deg);
+.grid-item.bomb {
+    background-image: url(./img/bomb.png);
 }
 
-p{
+.grid-item.safe {
+    background-image: url(./img/gyemant.jpg);
+}
+
+p {
     text-align: center;
     margin: 0;
     font-family: "Lacquer";
-    font-size: 100px;
-    padding:20px 0 20px 0;
+    font-size: 50px;
+    padding: 20px 0 20px 0;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #808080, #404040);
+       color: white;
+    font-family: 'Lacquer', sans-serif;
+    text-align: center;
+    padding: 50% 0;
+    height: 100%;
+}
+
+.panel {
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    height: 50vh;
+    width: 50vw;
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+}
+
+.panel input {
+    padding: 10px;
+    font-size: 18px;
+    width: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.panel button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+.panel button:hover {
+    background-color: #777;
 }

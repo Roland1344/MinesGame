@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +8,26 @@
     <script src="app.js" defer></script>
     <title>Mines Game</title>
 </head>
+
 <body>
-    <main>
-        <p>MINES</p>
-    </main>
+    <div class="container">
+        <div id="start-panel" class="panel">
+            <h2>Válaszd ki a bombák számát</h2>
+            <input type="number" id="bomb-count" min="1" max="36" value="2">
+            <button id="start-game">Játék indítása</button>
+        </div>
 
-    <div class="grid-container">
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
-        <div class="grid-item" data-front="./img/letoltes.jpg" data-back="./img/gyemant.jpg"></div>
+        <div class="game-container">
+            <main>
+                <p>MINES</p>
+                <div class="score-container">
+                    <h3>Pontszám: <span id="score">0</span></h3>
+                </div>
+                <button id="restart">Újrakezdés</button>
+            </main>
+            <div class="grid-container"></div>
+        </div>
     </div>
 </body>
+
 </html>
