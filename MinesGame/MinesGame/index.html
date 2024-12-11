@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Mines Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="start-panel" class="panel">
+            <h2>Válaszd ki a bombák számát</h2>
+            <div class="button-group">
+                <button class="bomb-count" data-count="3">3</button>
+                <button class="bomb-count" data-count="5">5</button>
+                <input
+                    type="number"
+                    id="custom-bomb-count"
+                    class="custom-input"
+                    min="2"
+                    max="35"
+                    placeholder="Egyedi"
+                />
+                <button class="bomb-count" data-count="10">10</button>
+                <button class="bomb-count" data-count="20">20</button>
+            </div>
+            <button id="start-game">Játék indítása</button>
+        </div>
+
+        <div class="game-container">
+            <main>
+                <p>MINES</p>
+                <div class="score-container">
+                    <h3>Pontszám: <span id="score">0</span></h3>
+                </div>
+                <button id="restart">Újrakezdés</button>
+            </main>
+            <div class="grid-container"></div>
+        </div>
+    </div>
+</body>
+
+</html>
