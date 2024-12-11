@@ -4,15 +4,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const restartButton = document.getElementById("restart");
     const startPanel = document.getElementById("start-panel");
     const startButton = document.getElementById("start-game");
-    const bombInput = document.getElementById("bomb-count");
+    const bombButtons = document.querySelectorAll(".bomb-count");
+    const customBombInput = document.getElementById("custom-bomb-count");
     const mainGame = document.querySelector("main");
-    let gridSize = 36; 
-    let bombCount = 8;
+
+    let gridSize = 36;
+    let bombCount = 3;
     let score = 0;
     let gameOver = false;
 
+    bombButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            bombButtons.forEach((btn) => btn.classList.remove("selected"));
+            customBombInput.value = ""; 
+            button.classList.add("selected");
+            bombCount = parseInt(button.dataset.count, 10);
+        });
+    });
+
+    customBombInput.addEventListener("input", () => {
+        bombButtons.forEach((btn) => btn.classList.remove("selected")); 
+        const value = parseInt(customBombInput.value, 10);
+        if (value >= 2 && value <= 35) {
+            bombCount = value; 
+        }
+    });
+
     startButton.addEventListener("click", () => {
-        bombCount = parseInt(bombInput.value, 10) || 8;
+        if (!bombCount || bombCount < 2 || bombCount > 35) {
+            alert("Adj meg egy érvényes bombaszámot (2 és 35 között)!");
+            return;
+        }
         initializeGrid();
     });
 
@@ -77,6 +99,4 @@ document.addEventListener("DOMContentLoaded", () => {
     restartButton.addEventListener("click", () => {
         initializeGrid();
     });
-
-    initializeGrid();
 });
