@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lacquer&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; 
+    margin: 0;
+    background: linear-gradient(to bottom, #464646, #bdbdbd);
+    font-family: 'Chakra', sans-serif;
+    color: white;
+}
+
+main div {
+    color: green;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-family: "Lacquer";
+    font-size: 45px; 
+    padding: 10px 0;
+}
+
+.tickets {
+    padding: 5px 10px;
+    font-size: 16px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.confirm {
+    background-color: #555;
+    border: solid 1px #000000;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.tickets:hover {
+    background-color: #e6c489;
+    color: black;
+}
+
+.confirm:hover {
+    background-color: #f90000;
+}
+
+#money {
+    position: relative; 
+    text-align: center;
+}
+
+#money div {
+    margin-bottom: 10px;
+    font-size: 12pt; 
+}
+
+#displayDep {
+    display: none;
+    background-color: #16202d;
+    padding: 8px; 
+    position: relative; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+#displayDep button {
+    padding: 2px;
+    width: 80px;
+    margin: 5px;
+}
+
+#displayDep #row1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#displayDep #row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#displayDep #confirm {
+    padding: 6px;
+    position: relative; 
+}
+
+#displayDep p {
+    margin: 2px;
+}
+
+#board {
+    position: relative; 
+}
+
+.boardrow {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    align-items: center;
+}
+
+.btnGame {
+    background-color: #4a4a4a;
+    box-shadow: 0px 5px 0px #b5b5b5;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 1px solid#4a4a4a;
+    flex: 1 1 45%; 
+    margin: 5px; 
+}
+
+section {
+    position: relative; 
+    text-align: center;
+}
+
+main section span {
+    text-align: right;
+}
+
+section div .confirm {
+    padding: 2px;
+}
+
+section div {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+#inp {
+    padding: 4px; 
+    background-color: #16202d;
+    border: 2px solid #0d131c;
+    color: white;
+    font-weight: bold;
+}
+
+#inp:focus {
+    outline: none;
+    border: 2px solid #1b283c;
+}
+
+#inp:hover {
+    border: 2px solid #1b283c;
+}
+
+#board h2 {
+    color: white;
+    font-size: 15px; 
+    text-align: center;
+    margin-top: 5px;
+}
+
+section div div {
+    display: flex;
+    flex-direction: column;
+}
+
+section div {
+    display: flex;
+    flex-direction: row;
+}
+
+section div div button {
+    margin: 2px;
+}
+
+#sect {
+    position: relative;
+}
+
+.boxes {
+    background-color: #16202d;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#profit p {
+    color: rgb(12, 165, 12);
+}
+
+#hits p {
+    color: #2283f6;
+}
+
+input {
+    border-radius: 10px;
+}
+
+#deposit {
+    background-color: red;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 430px) {
+    header h1 {
+        font-size: 30px;
+        padding: 5px 0; 
+    }
+
+    .tickets, .confirm {
+        font-size: 12px; 
+        padding: 6px; 
+    }
+
+    #money, #displayDep, #board, #sect {
+        width: 90%; 
+        margin-bottom: 5px; 
+    }
+
+    section {
+        width: 90%; 
+        margin-bottom: 5px; 
+    }
+
+    main {
+        padding-bottom: 10px; 
+    }
+
+    .boardrow {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 5px; 
+    }
+
+    section div {
+        flex-direction: column; 
+        margin-bottom: 5px; 
+    }
+}
+
+.boardrow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 10px; 
+    padding: 10px; 
+}
+
+
+
+@media (max-width: 768px) {
+    .boardrow {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+@media (max-width: 430px) {
+    .boardrow {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 360px) {
+    .boardrow {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 222px) {
+    .boardrow {
+        grid-template-columns: 1fr; 
+    }
+}

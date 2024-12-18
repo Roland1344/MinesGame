@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>MinerGame</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>
+                MINES
+            </h1>
+        </div>
+        <div id="money">
+            <div id="balance">
+                <p>Balance</p>
+            </div>
+            <button id="deposit" class="tickets" onclick="deposit()">DEPOSIT</button>
+        </div>
+        <div id="dep">
+
+            <div id="displayDep">
+                <h3>Choose an amount:</h3>
+                <div id="row1">
+                    <button class="tickets" onclick="add(20)">$200</button>
+                    <button class="tickets" onclick="add(50)">$50</button>
+                    <button class="tickets" onclick="add(100)">$100</button>
+                </div>
+                <div id="row2">
+                    <button class="tickets" onclick="add(200)">$20</button>
+                    <button class="tickets" onclick="add(500)">$500</button>
+                    <button class="tickets" onclick="add(1000)">$1000</button>
+                </div>
+                <button class="confirm" id="confirm" onclick="confirmDep()">Confirm</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="section1">
+            <span>Enter the Amount</span>
+            <div>
+                <div>
+                    <button class="confirm" onclick="max()">Max</button>
+                </div>
+                <input type="number" id="inp" min="0" required>
+            </div>
+            <button class="tickets" id="bet" onclick="bet()">Bet</button>
+            <button class="tickets" id="stop" onclick="stop()">Stop</button>
+        </section>
+        <section id="sect">
+            <span>Profit</span>
+            <div id="profit" class="boxes">
+                <p>$0</p>
+            </div>
+            <span>Hits</span>
+            <div id="hits" class="boxes">
+                <p>0</p>
+            </div>
+        </section>
+
+
+
+        <div id="board">
+            <h2 id="alert">Waiting for a round...</h2>
+            <div class="boardrow">
+                <button class="btnGame" id="btnGame1" onclick="clicar(1)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame2" onclick="clicar(2)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame3" onclick="clicar(3)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame4" onclick="clicar(4)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame5" onclick="clicar(5)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+
+                <button class="btnGame" id="btnGame6" onclick="clicar(6)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame7" onclick="clicar(7)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame8" onclick="clicar(8)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame9" onclick="clicar(9)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame10" onclick="clicar(10)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+
+                <button class="btnGame" id="btnGame11" onclick="clicar(11)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame12" onclick="clicar(12)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame13" onclick="clicar(13)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame14" onclick="clicar(14)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame15" onclick="clicar(15)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+
+                <button class="btnGame" id="btnGame16" onclick="clicar(16)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame17" onclick="clicar(17)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame18" onclick="clicar(18)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame19" onclick="clicar(19)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame20" onclick="clicar(20)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+
+                <button class="btnGame" id="btnGame21" onclick="clicar(21)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame22" onclick="clicar(22)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame23" onclick="clicar(23)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame24" onclick="clicar(24)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+                <button class="btnGame" id="btnGame25" onclick="clicar(25)"><img src="./img/letoltes.jpg" alt=""
+                        style="height: 50px; border-radius: 10px"></button>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>
